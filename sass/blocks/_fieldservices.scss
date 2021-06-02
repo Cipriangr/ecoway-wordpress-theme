@@ -1,0 +1,76 @@
+#fieldservices{
+  background: #FAFAFA;
+  position: relative;
+  &:after{
+    content: '';
+    border-top: 6px solid $primary-color;
+    width: 65px;
+    margin: 0 auto;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    right: 0;
+    border-radius: 2px;
+  }
+  .content{
+    @include xy-grid-container();
+    padding-top: 20px;
+    padding-bottom: 10px;
+    @include breakpoint(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 15px;
+      padding-top: 104px;
+      padding-bottom: 56px;
+    }
+    @include breakpoint(large) {
+      grid-gap: 24px;
+    }
+    .service{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 35px;
+      @include breakpoint(medium) {
+        margin-bottom: 65px;
+      }
+      .image{
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        background-repeat: no-repeat;
+        height: 300px;
+        @include breakpoint(medium) {
+          height: 350px;
+        }
+        @include breakpoint(large) {
+          height: 428px;
+        }
+      }
+      h4{
+        font: 700 20px/38px 'Lato';
+        margin: 10px 0;
+        @include breakpoint(medium) {
+          margin: 25px 0;
+          font: 700 24px/48px 'Lato';
+        }
+      }
+      a{
+        font: 900 14px/26px 'Lato';
+        border: 2px solid $secondary-color;
+        padding: 8px 26px;
+        border-radius: 4px;
+        color: $secondary-color;
+        @include breakpoint(medium) {
+          font: 900 16px/30px 'Lato';
+          padding: 12px 47px;
+        }
+        &:hover{
+          border: 2px solid $primary-color;
+          background-color: $primary-color;
+          color: white;
+        }
+      }
+    }
+  }
+}

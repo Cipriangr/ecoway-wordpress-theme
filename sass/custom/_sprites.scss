@@ -1,0 +1,42 @@
+.sprites{
+  background-image: url("../../../../../wp-content/themes/ecoway/images/sprites.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  &.down-arrow{
+    height: 10px;
+    width: 16px;
+    background-position: 0 0;
+  }
+  &.left-arrow{
+    width: 17.62px;
+    height: 30px;
+    background-position: -16px 0;
+    &:hover{
+      background-position: -16px -33px;
+    }
+  }
+  &.right-arrow{
+    width: 17.62px;
+    height: 30px;
+    background-position: -38px 0;
+    &:hover{
+      background-position: -38px -33px;
+    }
+  }
+  &.left-white-arrow{
+    width: 17.62px;
+    height: 30px;
+    background-position: -63px 0;
+    &:hover{
+      background-position: -16px -33px;
+    }
+  }
+  &.right-white-arrow{
+    width: 17.62px;
+    height: 30px;
+    background-position: -94px 0;
+    &:hover{
+      background-position: -38px -33px;
+    }
+  }
+}

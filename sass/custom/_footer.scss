@@ -1,0 +1,267 @@
+#footer{
+  margin-bottom: 20px;
+  @include xy-grid-container(); 
+  margin-top: 29px;
+  @include breakpoint(medium) {
+    margin-top: 69px;
+    margin-bottom: 40px;
+  }
+  .footer-content{
+    @include breakpoint(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr 1.25fr 0.85fr;
+      grid-gap: 30px;
+    }
+    @include breakpoint(large) {
+      grid-template-columns: 1.8fr 1.25fr 1.25fr 0.85fr;
+      grid-gap: 50px;
+    }
+    @include breakpoint(xlarge) {
+      grid-gap: 100px;
+    }
+    .logo{
+      margin-bottom: 20px;
+      text-align: center;
+      @include breakpoint(medium) {
+        margin-bottom: 0;
+      }
+      .cards{
+        // margin-left: 20px;
+        margin-top: 22px;
+      }
+    }
+    .footer-navigation{
+      margin-bottom: 10px;
+      @include breakpoint(medium) {
+        margin-bottom: 0;
+      }
+      h4{
+        font: 700 16px/30px 'Lato';
+        position: relative;
+        padding-bottom: 3px;    
+        margin-bottom: 5px;
+        @include breakpoint(medium) {
+          margin-bottom: 10px;
+          padding-bottom: 8px;   
+        }
+        @include breakpoint(large) {
+          margin-bottom: 25px;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          border-bottom: 2px solid $primary-color;
+          height: 2px;
+          border-radius: 2px;
+          width: 28px;
+          bottom: 0;
+          left: 0
+        }
+      }
+      ul{
+        display: flex;
+        flex-direction: column;
+        li{
+          margin: 3px 0;
+          @include breakpoint(medium) {
+            margin: 5px 0;
+          }
+          a{
+            padding: 0; 
+            font: 600 14px/24px 'Lato';
+            color: $secondary-color;
+            text-transform: uppercase;
+            width: fit-content;
+            @include breakpoint(medium) {
+              font: 600 16px/30px 'Lato';
+            }
+            &:hover{
+              color: $primary-color;
+            }
+          }
+          .sub-menu{
+            display: none;
+            margin: 0;
+          }
+          &.free-estimate{
+            display: none;
+          }
+        }
+        
+      }
+    }
+    .footer-services{
+      margin-bottom: 10px;
+      @include breakpoint(medium) {
+        margin-bottom: 0;
+      }
+      h4{
+        font: 700 16px/30px 'Lato';
+        position: relative;
+        padding-bottom: 3px;    
+        margin-bottom: 5px;
+        @include breakpoint(medium) {
+          margin-bottom: 10px;
+          padding-bottom: 8px;   
+        }
+        @include breakpoint(large) {
+          margin-bottom: 25px;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          border-bottom: 2px solid $primary-color;
+          height: 2px;
+          border-radius: 2px;
+          width: 28px;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      ul{
+        display: flex;
+        flex-direction: column;
+        li{
+          margin: 0;
+          @include breakpoint(medium) {
+            margin: 5px 0;
+          }
+          a{
+            padding: 0;
+            font: 600 14px/24px 'Lato';
+            color: $secondary-color;
+            text-transform: uppercase;
+            width: fit-content;
+            @include breakpoint(medium) {
+              font: 600 16px/30px 'Lato';
+            }
+            &:hover{
+              color: $primary-color;
+            }
+          }
+          .sub-menu{
+            display: none;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .contact{
+      display: flex;
+        flex-direction: column;
+      h4{
+        font: 700 16px/30px 'Lato';
+        position: relative;
+        padding-bottom: 3px;    
+        margin-bottom: 5px;
+        @include breakpoint(medium) {
+          margin-bottom: 10px;
+          padding-bottom: 8px;   
+        }
+        @include breakpoint(large) {
+          margin-bottom: 25px;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          border-bottom: 2px solid $primary-color;
+          height: 2px;
+          border-radius: 2px;
+          width: 28px;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      a{
+        font: 600 14px/24px 'Lato';
+        color: $secondary-color;
+        width: fit-content;
+        @include breakpoint(medium) {
+          font: 600 16px/30px 'Lato';
+          padding-right: 10%;
+        }
+        &:hover{
+          color: $primary-color;
+        }
+      }
+      .phone{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        @include breakpoint(medium) {
+        }
+      }
+      .icons{
+        display: flex;
+        align-items: center;
+        a{
+          margin: 0 5px;
+          padding: 0 3px;
+          &.facebook{
+            display: flex;
+            align-items: center;
+            margin-left: 0;
+            &:hover{
+              svg path{
+                fill: #2d88ff;
+              }
+            }
+            svg{
+              path{
+                transition: all 0.2s ease-in-out;
+              }
+            }
+          }
+          &.instagram{
+            display: flex;
+            align-items: center;
+            &:hover{
+              svg path{
+                fill: #d92d7c;
+              }
+            }
+            svg{
+              path{
+                transition: all 0.2s ease-in-out;
+              }
+            }
+          }
+          &.twitter{
+            display: flex;
+            align-items: center;
+            margin-right: 0px;
+            &:hover{
+              svg path{
+                fill: #1da1f2;
+              }
+            }
+            svg{
+              path{
+                transition: all 0.2s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright{
+    margin-top: 25px;
+    text-align: center;
+    @include breakpoint(medium) {
+      text-align: unset;
+      margin-top: 95px;
+    }
+    p{
+      font: 400 14px/24px 'Lato';
+      color: #83838A;
+      padding: 0;
+      border-top: 1px solid #ADADAD;
+      padding-top: 6px;
+      border-color: rgba($color: #ADADAD, $alpha: 0.2);
+      @include breakpoint(medium) {
+        padding-top: 15px;
+      }
+    }
+    
+  }
+}

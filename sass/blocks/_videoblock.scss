@@ -1,0 +1,134 @@
+#custom-video{
+  position: relative;
+  @include breakpoint(small down) {
+    transform: translateY(-25px);
+  }
+  .content{
+    @include xy-grid-container();
+    @include xy-grid();
+    flex-direction: column;
+    justify-content: space-between;
+    @include breakpoint(medium) {
+      min-height: 380px;
+    }
+    @include breakpoint(large) {
+      display: grid;
+      grid-gap: 40px;
+      justify-content: center;
+      min-height: 400px;
+      flex-direction: row;
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint(xlarge) {
+      min-height: 450px;
+    }
+    @include breakpoint(xxlarge) {
+      min-height: 800px;
+    }
+    .text-content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h2{ 
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        font: 700 30px/36px 'Lato';
+        @include breakpoint(medium) {
+          padding-bottom: 32px;
+        margin-bottom: 15px;
+          font: 700 48px/54px 'Lato';
+        }
+        @include breakpoint(large) {
+          max-width: 320px;
+          margin-bottom: initial;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          border-bottom: 6px solid $primary-color;
+          height: 6px;
+          border-radius: 2px;
+          width: 65px;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+    .video{
+      cursor: pointer;
+      @include breakpoint(small down) {
+        width: 100%;
+      }
+      @include breakpoint(medium down) {
+        display: flex;
+        justify-content: center;
+      }
+      @include breakpoint(xxlarge) {
+        transform: translateY(-70px);
+      }
+      .wp-video{
+        // @include breakpoint(small down) {
+        //   width: 350px!important;
+        // }
+        // @media screen and (max-width: 350px){
+        //   width: 300px!important;
+        // }
+        @include breakpoint(large only) {
+          width: 600px!important;
+        }
+        @include breakpoint(xlarge) {
+          width: 700px!important;
+        }
+        @include breakpoint(xxlarge) {
+          width: 800px!important;
+        }
+      }
+      .wp-video{
+        .mejs-video {
+          text-align: center;
+          @include breakpoint(small down) {
+            height: 350px!important;
+          }
+          @include breakpoint(medium) {
+            height: 600px!important;
+          }
+          @include breakpoint(large) {
+            height: 600px!important;
+          }
+          @include breakpoint(xlarge) {
+            height: 700px!important;
+          }
+          @include breakpoint(xxlarge) {
+            height: 850px!important;
+          }
+          .mejs-inner .mejs-mediaelement{
+            .wp-video-shortcode{     
+              text-align: center;
+              @include breakpoint(small down) {
+                height: 350px!important;
+              }
+              @include breakpoint(medium) {
+                height: 600px!important;
+              }
+              @include breakpoint(large) {
+                height: 600px!important;
+              }
+              @include breakpoint(xlarge) {
+                width: 700px!important;
+                height: 700px!important;
+              }
+              @include breakpoint(xxlarge) {
+                height: 850px!important;
+                width: 800px!important;
+              }
+            }
+          }
+          .mejs-controls{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

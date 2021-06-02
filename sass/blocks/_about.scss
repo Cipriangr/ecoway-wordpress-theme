@@ -1,0 +1,142 @@
+#about{
+  position: relative;
+  z-index: 2;
+  @include breakpoint(large) {
+    display: grid;
+    grid-template-columns: 1.03fr 0.97fr;
+  }
+  .left-content{
+    background-color: $secondary-color;
+    display: flex;
+    @include breakpoint(large) {
+      justify-content: flex-end;
+      transform: translateY(-25px);
+    }
+    .text-content{
+      color: white;
+      padding: 20px 0;
+      @include breakpoint(medium down) {
+        @include xy-grid-container();
+      }
+      @include breakpoint(large) {
+        padding: 145px 15px;
+      }
+      @include breakpoint(xlarge) {
+        margin: 0 14px;
+      }
+      @include breakpoint(xxlarge) {
+        margin: 0 50px;
+      }
+      @media screen and (min-width: 1600px){
+        @include xy-cell(8.627);
+      }
+      h2{
+        font: 700 30px/36px 'Lato';
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        @include breakpoint(medium) {
+          padding-bottom: 30px;
+          margin-bottom: 30px;
+          font: 700 42px/50px 'Lato';
+          padding-right: 30%;
+        }
+        @include breakpoint(large) {
+          padding-right: 15%;
+          font: 700 48px/54px 'Lato';
+        }
+        @include breakpoint(xlarge) {
+          padding-right: 10%;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          border-bottom: 6px solid $primary-color;
+          height: 6px;
+          border-radius: 2px;
+          width: 65px;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      p{
+        font: 500 16px/24px 'Lato';
+        padding: 0;
+        @include breakpoint(medium) {
+          font: 500 18px/28px 'Lato';
+        }
+        @include breakpoint(large) {
+          padding-right: 10%;
+        }
+        @include breakpoint(xlarge) {
+          padding-right: 18.5%;
+        }
+      }
+      .first{
+        @include breakpoint(xlarge) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+  .right-content{
+    margin-bottom: 30px;
+    @include breakpoint(medium) {
+      padding-bottom: 40px;
+      margin-bottom: initial;
+    }
+    @include breakpoint(large) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 94%;
+      padding-bottom: 0px;
+    }
+    .text-content{
+      padding: 20px 0;
+      @include breakpoint(medium down) {
+        @include xy-grid-container();
+      }
+      @include breakpoint(large) {
+        padding: 145px 0;
+        @include xy-cell(9);
+      }
+      @include breakpoint(xlarge) {
+        @include xy-cell(8);
+      }
+      @include breakpoint(xxlarge) {
+        @include xy-cell(9);
+      }
+      h3{
+        font: 700 24px/36px 'Lato';
+        margin-bottom: 15px;
+        @include breakpoint(medium) {
+          font: 700 28px/48px 'Lato';
+        }
+        @include breakpoint(large) {
+          margin-bottom: 40px;
+        }
+      }
+      ul{
+        li{
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          font: 500 16px/20px 'Lato';
+          @include breakpoint(medium) {
+            font: 500 18px/40px 'Lato';
+            margin-bottom: 0px;
+          }
+          svg{
+            margin-right: 10px;
+            min-height: 24px;
+            min-width: 24px;
+            @include breakpoint(medium) {
+              margin-right: 33px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

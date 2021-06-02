@@ -1,0 +1,174 @@
+#custom-hero{
+  position: relative;
+  #hero{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 160px;
+    width: 100%;
+    @include breakpoint(medium) {
+      height: 300px;
+    }
+    @include breakpoint(large) {
+      height: 420px;
+    }
+    &.is_homepage_hero{
+      height: 450px;
+      @include breakpoint(medium) {
+        height: 550px;
+      }
+      @include breakpoint(large) {
+        height: 700px;
+      }
+      @include breakpoint(xlarge) {
+        height: 780px;
+      }
+    }
+    .text-content{
+      height: 100%;
+      @include xy-grid-container();
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      h1{
+        text-align: center;
+        max-width: 300px;
+        text-shadow: 1.2px 1.2px black;
+        font: 700 32px/42px 'Lato';
+        @include breakpoint(medium) {
+          max-width: 600px;
+          font: 700 58px/64px 'Lato';
+        }
+        @include breakpoint(large) {
+          max-width: 750px;
+          font: 700 64px/70px 'Lato';
+        }
+      }
+      .hero-text{
+        display: flex;
+        margin-bottom: 10px;
+        flex-direction: column;
+        text-shadow: 1.2px 1.2px $secondary-color;
+        @include breakpoint(medium) {
+          flex-direction: row;
+          margin-bottom: 20px;
+        }
+        p{
+          font: 500 18px/30px 'Lato';
+          padding: 0;
+          text-align: center;
+          margin-bottom: 0px;
+          @include breakpoint(xlarge) {
+            font: 500 24px/40px 'Lato';
+            text-align: initial;
+            margin-bottom: initial;
+          }
+          @include breakpoint(xxlarge) {
+            padding: initial;
+            font: 500 24px/70px 'Lato';
+          }
+        }
+        h6{
+          display: none;
+          @include breakpoint(medium) {
+            display: block;
+            font: 500 20px/30px 'Lato';
+            padding: 0 10px;
+          }
+          @include breakpoint(large) {
+            padding: 0 15px;
+          }
+          @include breakpoint(xlarge) {
+            font: 500 24px/40px 'Lato';
+          }
+          @include breakpoint(xxlarge) {
+            font: 500 24px/70px 'Lato';
+            padding: 0 28px;
+          }
+          
+        }
+      }
+      .contact{
+        background: $primary-color;
+        opacity: 0.8;
+        border-radius: 4px;
+        padding: 20px 25px;
+        text-align: center;
+        @include breakpoint(medium) {
+          padding: 26px 59px;
+        }
+        h4{
+          font: 800 20px/28px 'Lato';
+          margin-bottom: 26px;
+          @include breakpoint(medium) {
+            font: 800 24px/30px 'Lato';
+          }
+        }
+        span{
+          a{
+            color: white;
+            border: 2px solid white;
+            border-radius: 4px;
+            font: 700 14px/30px 'Lato';
+            padding: 12px 50px;
+            &:hover{
+              color: $secondary-color;
+              border: 2px solid $secondary-color;
+            }
+            @include breakpoint(medium) {
+              font: 700 16px/38px 'Lato';
+            }
+          }
+        }
+      }
+    }
+  }
+  .slick-slide{
+    outline: none;
+  }
+  .badge{
+    background: transparent;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 250px;
+    display: none;
+    height: 253px;
+    position: relative;
+    z-index: 3;
+    @include breakpoint(medium) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 282px;
+      height: 293px;
+      position: absolute;
+      bottom: -110px;
+      right: 0px;
+    }
+    @include breakpoint(large) {
+      right: 30px;
+    }
+    @include breakpoint(xlarge) {
+      right: 86px;
+    }
+    h5{
+      font: 900 34px/26px 'Lato'; 
+      margin-top: 20px;
+      @include breakpoint(medium) {
+        font: 900 48px/30px 'Lato'; 
+      }
+    }
+    p{
+      font: 900 14px/22px 'Lato';
+      margin-top: 5px;
+      @include breakpoint(medium) {
+        font: 900 18px/24px 'Lato';
+        margin-top: 5px;
+      }
+    }
+  }
+}
